@@ -1,8 +1,12 @@
+import BoxContainer from '@/components/BoxContainer';
 import React from 'react'
+
 
 const ChatbotPage = () => {
   return (
-    <div>Chatbot</div>
+    <div className='h-screen pt-3'>
+    <BoxContainer />
+    </div>
   )
 }
 

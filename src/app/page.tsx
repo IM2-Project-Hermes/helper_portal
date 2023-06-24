@@ -1,6 +1,5 @@
 import Image from "next/image";
 import burger from "../../public/burger-menu.svg";
-import { FC, ReactNode } from "react";
 import { FormTextInput } from "@/components/FormInput";
 
 const LoginPage = () => {
@@ -27,6 +26,7 @@ const LoginPage = () => {
       </div>
     </div>
   );
-};
+}
+
 
 export default LoginPage;
