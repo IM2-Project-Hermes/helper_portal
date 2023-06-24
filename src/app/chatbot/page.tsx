@@ -1,5 +1,4 @@
 import BoxContainer from '@/components/BoxContainer';
-import React from 'react'
 
 
 const ChatbotPage = () => {
