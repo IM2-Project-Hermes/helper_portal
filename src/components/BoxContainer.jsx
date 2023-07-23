@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import lupe from "../../public/lupe.svg";
+import logo from "../../public/hella-logo.svg";
 import styles from "./BoxContainer.module.css";
 import Image from "next/image";
 import "../styles/chat-bot.css";
@@ -14,6 +15,9 @@ const BotContainer = () => {
 
   return (
     <>
+      <div>
+        <Image src={logo}/>
+      </div>
       <SearchContainer onQuestionChange={handleDataChange} />
       <AnswerContainer question={question} />
     </>
