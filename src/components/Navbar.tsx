@@ -30,9 +30,6 @@ const Dropdownbutton = () => {
       </button>
       {open ? (
         <ul className="absolute top-full">
-          <DropdownElement page="/home" name="Home" />
-          <DropdownElement page="/uebersicht" name="Übersicht" />
-          <DropdownElement page="/timetracker" name="Time" />
           <DropdownElement page="/chatbot" name="Chatbot" />
         </ul>
       ) : null}
