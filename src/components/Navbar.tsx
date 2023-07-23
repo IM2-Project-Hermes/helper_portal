@@ -24,7 +24,7 @@ const Dropdownbutton = () => {
     <div className="flex flex-col relative">
       <button
         onClick={handleOpen}
-        className=" bg-white rounded-md p-2 w-10 h-10"
+        className=" bg-white rounded-md p-2 w-12 h-12 border-2 border-black shadow-lg"
       >
         <Image src={burger} alt="Dropdown Menu" />
       </button>
