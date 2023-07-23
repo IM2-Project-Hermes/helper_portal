@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <Dropdownbutton />
-      <LogOut />
+      <h1>Hermes</h1>
     </div>
   );
 };
@@ -53,12 +53,5 @@ export const DropdownElement: FC<ElementProps> = ({ name, page }) => {
   );
 };
 
-const LogOut = () => {
-  return (
-    <Link href={"/"}>
-      <button className="bg-white rounded-md text-center p-2">Log Out</button>
-    </Link>
-  );
-};
 
 export default Navbar;
