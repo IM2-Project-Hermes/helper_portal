@@ -2,9 +2,8 @@
 import { useState, useEffect } from "react";
 import lupe from "../../public/lupe.svg";
 import logo from "../../public/hella-logo.svg";
-import styles from "./BoxContainer.module.css";
 import Image from "next/image";
-import "../styles/chat-bot.css";
+import "@styles/chat-bot.css";
 
 const BotContainer = () => {
   const [question, setQuestion] = useState("");
@@ -16,7 +15,7 @@ const BotContainer = () => {
   return (
     <>
       <div>
-        <Image src={logo}/>
+        <Image src={logo} />
       </div>
       <SearchContainer onQuestionChange={handleDataChange} />
       <AnswerContainer question={question} />
@@ -37,10 +36,10 @@ export const SearchContainer = ({ onQuestionChange }) => {
   };
 
   return (
-    <div className={styles.boxContainer}>
+    <div>
       <form
         onSubmit={handleSubmit}
-        className="flex justify-between rounded-md pl-3 h-10 bg-white"
+        className="box-container justify-between items-center p-3 h-12 "
       >
         <input
           type="text"
@@ -65,7 +64,8 @@ export const AnswerContainer = ({ question }) => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await fetch(/* `https://europe-west3-project-hermes-390519.cloudfunctions.net/api?question=[${question}]` */);
+        const response =
+          await fetch(/* `https://europe-west3-project-hermes-390519.cloudfunctions.net/api?question=[${question}]` */);
         const jsonData = await response.json();
         setData(jsonData);
         setLoading(false);
@@ -79,26 +79,24 @@ export const AnswerContainer = ({ question }) => {
   }, [question]);
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className={styles.boxContainer}>
-        <div className="flex flex-col gap-4 rounded-md p-3 bg-white">
-          {loading ? (
-            <p>Loading...</p>
-          ) : (
-            <>
-              {data ? (
-                <div>
-                  <p>{data.result.answer}</p>
-                  <a href="">{data.result.sources}</a>
-                </div>
-              ) : (
-                <p>No data available.</p>
-              )}
-            </>
-          )}
-        </div>
-        <p>Question sent to ChatBot: {question}</p>
+    <div>
+      <div className="box-container flex-col  gap-4 p-3">
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          <>
+            {data ? (
+              <div>
+                <p>{data.result.answer}</p>
+                <a href="">{data.result.sources}</a>
+              </div>
+            ) : (
+              <p>No data available.</p>
+            )}
+          </>
+        )}
       </div>
+      <p>Question sent to ChatBot: {question}</p>
     </div>
   );
 };
