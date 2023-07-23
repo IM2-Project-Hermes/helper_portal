@@ -30,7 +30,7 @@ const Dropdownbutton = () => {
       </button>
       {open ? (
         <ul className="absolute top-full">
-          <DropdownElement page="/chatbot" name="Chatbot" />
+          <DropdownElement page="/answers" name="Chatbot" />
         </ul>
       ) : null}
     </div>
@@ -49,6 +49,5 @@ export const DropdownElement: FC<ElementProps> = ({ name, page }) => {
     </Link>
   );
 };
-
 
 export default Navbar;
