@@ -2,7 +2,7 @@ import BotContainer from "@/components/BoxContainer";
 
 const ChatbotPage = () => {
   return (
-    <div className="h-screen pt-3">
+    <div className="page-container">
       <BotContainer />
     </div>
   );

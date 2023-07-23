@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import lupe from "../../public/lupe.svg";
 import styles from "./BoxContainer.module.css";
 import Image from "next/image";
+import "../styles/chat-bot.css";
 
 const BotContainer = () => {
   const [question, setQuestion] = useState("");
@@ -60,9 +61,7 @@ export const AnswerContainer = ({ question }) => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await fetch(
-          `https://europe-west3-project-hermes-390519.cloudfunctions.net/api?question=[${question}]`
-        );
+        const response = await fetch(/* `https://europe-west3-project-hermes-390519.cloudfunctions.net/api?question=[${question}]` */);
         const jsonData = await response.json();
         setData(jsonData);
         setLoading(false);
@@ -84,10 +83,10 @@ export const AnswerContainer = ({ question }) => {
           ) : (
             <>
               {data ? (
-                <>
+                <div>
                   <p>{data.result.answer}</p>
                   <a href="">{data.result.sources}</a>
-                </>
+                </div>
               ) : (
                 <p>No data available.</p>
               )}
