@@ -2,8 +2,6 @@
 import Image from "next/image";
 import logo from "../../public/hella-logo.svg";
 import QuestionsContainer from "@/components/QuestionsContainer";
-import Testing from "@/components/Testing";
-import Link from "next/link";
 import UserQuestion from "@/components/UserQuestion";
 
 const HomePage = () => {

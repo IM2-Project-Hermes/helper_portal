@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .page-container {
-  @apply h-screen pt-3;
+  @apply pt-3;
   background-image: linear-gradient(#3c3e4b, #ffffff);
 }
 

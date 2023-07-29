@@ -16,31 +16,27 @@ const UserQuestion = () => {
   };
 
   return (
-    <div className="h-4/5">
-      <form
-        onSubmit={handleSubmit}
-        className="box-container justify-between items-center p-3 h-12 "
+    <form
+      onSubmit={handleSubmit}
+      className="box-container justify-between items-center p-3 h-12 "
+    >
+      <input
+        type="text"
+        value={inputValue}
+        onChange={handleInputChange}
+        placeholder="Enter your question..."
+      />
+      <Link
+        href={{
+          pathname: "/answers",
+          query: { question: `${inputValue}` },
+        }}
       >
-        <input
-          type="text"
-          value={inputValue}
-          onChange={handleInputChange}
-          placeholder="Enter your question..."
-        />
-        <Link
-          href={{
-            pathname: "/answers",
-            query: { question: `${inputValue}` },
-          }}
-        >
-          <button className="h-10 w-10 p-1" type="submit">
-            <Image src={lupe} alt="test" />
-          </button>
-        </Link>
-      </form>
-
-      <p>Submitted Question: {inputValue}</p>
-    </div>
+        <button className="h-10 w-10 p-1" type="submit">
+          <Image src={lupe} alt="test" />
+        </button>
+      </Link>
+    </form>
   );
 };
 
