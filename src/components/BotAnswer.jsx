@@ -23,6 +23,7 @@ const BotAnswer = ({ question }) => {
     fetchData();
   }, [question]);
 
+  const sourcesRegex = /\/(.*)/;
   return (
     <div className="box-container flex-col justify-between h-64 gap-4 p-3">
       {loading ? (
@@ -52,7 +53,7 @@ const BotAnswer = ({ question }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {data.result.sources}
+                  {data.result.sources.match(sourcesRegex)[1]}
                 </a>
               </div>
             ) : (
