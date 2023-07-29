@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { useState, useEffect } from "react";
-import "@styles/chat-bot.css";
 
 const BotAnswer = ({ question }) => {
   const [data, setData] = useState(null);

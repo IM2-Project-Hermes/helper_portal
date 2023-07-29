@@ -1,0 +1,32 @@
+.title-container div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 50%;
+  height: 100%;
+  border-bottom: 2px solid black;
+}
+
+.title-container div h1 {
+  text-align: center;
+}
+
+.faq-title {
+  background-color: #d1d8e0;
+  border-radius: 2px 0 0 0;
+}
+
+.last-title {
+  background-color: #4b6584;
+  border-left: 2px solid black;
+  border-radius: 0 2px 0 0;
+}
+
+.questions-container {
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.faq-container {
+  border-radius: 0 0 2px 2px;
+}
