@@ -20,7 +20,7 @@ const UserQuestion = () => {
       onSubmit={handleSubmit}
       className="box-container justify-between items-center p-3 h-12 "
     >
-      <input
+      <input //style is from global.css
         type="text"
         value={inputValue}
         onChange={handleInputChange}

@@ -12,3 +12,11 @@
   border: 2px black solid;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 }
+
+input {
+  @apply w-full p-2;
+}
+
+input:focus {
+  @apply outline-none;
+}
