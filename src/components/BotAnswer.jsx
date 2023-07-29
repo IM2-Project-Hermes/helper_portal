@@ -8,8 +8,9 @@ const BotAnswer = ({ question }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response =
-          await fetch(/* `https://europe-west3-project-hermes-390519.cloudfunctions.net/api?question=[${question}]` */);
+        const response = await fetch(
+          `https://europe-west3-project-hermes-390519.cloudfunctions.net/api?question=[${question}]`
+        );
         const jsonData = await response.json();
         setData(jsonData);
         setLoading(false);
@@ -20,6 +21,7 @@ const BotAnswer = ({ question }) => {
     };
     if (question) {
       fetchData();
+      console.log("fetching data");
     }
   }, []);
 
@@ -41,6 +43,7 @@ const BotAnswer = ({ question }) => {
             {data ? (
               <div className="mt-2">
                 <a
+                  className="underline"
                   href={`https://www.schelix.de/${data.result.sources}`}
                   target="_blank"
                   rel="noopener noreferrer"
