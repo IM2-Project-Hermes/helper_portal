@@ -1,6 +1,6 @@
 import React from "react";
-import Faq from "./Faq";
-import QuestionsTitle from "./QuestionsTitle";
+import Faq from "@/components/Faq";
+import QuestionsTitle from "@/components/QuestionsTitle";
 import "@styles/question-container.css";
 
 const QuestionsContainer = () => {

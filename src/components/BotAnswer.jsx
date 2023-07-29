@@ -8,7 +8,6 @@ const BotAnswer = ({ question }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setLoading(true);
         const response =
           await fetch(/* `https://europe-west3-project-hermes-390519.cloudfunctions.net/api?question=[${question}]` */);
         const jsonData = await response.json();
@@ -19,41 +18,34 @@ const BotAnswer = ({ question }) => {
         setLoading(false);
       }
     };
-
-    fetchData();
-  }, [question]);
+    if (question) {
+      fetchData();
+    }
+  }, []);
 
   const sourcesRegex = /\/(.*)/;
   return (
     <div className="box-container flex-col justify-between gap-4 p-3">
+      {question && <h2 className="font-bold">{question}?</h2>}
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <>
-          {data ? (
-            <div>
-              <h2 className="font-bold">{question}?</h2>
-              <p>{data.result.answer}</p>
-            </div>
-          ) : (
-            <p>No data available.</p>
-          )}
-        </>
+        <>{data ? <p>{data.result.answer}</p> : <p>No data available.</p>}</>
       )}
-      <div className="border-t-2">
+      <div className="border-t-2 border-black p-2">
         <h2>Sources:</h2>
         {loading ? (
           <p>Loading...</p>
         ) : (
           <>
             {data ? (
-              <div>
+              <div className="mt-2">
                 <a
                   href={`https://www.schelix.de/${data.result.sources}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {data.result.sources.match(sourcesRegex)[1]}
+                  1. {data.result.sources.match(sourcesRegex)[1]}
                 </a>
               </div>
             ) : (
