@@ -3,12 +3,12 @@ import "@styles/question-container.css";
 
 const Faq = () => {
   return (
-    <div className="faq-container bg-white pl-5">
+    <div className="faq-container bg-white p-3">
       <h2 className="font-bold">Frequently Asked Questions</h2>
-      <ul className="list-disc pl-10">
-        <li>How to rent a car?</li>
-        <li>How to rent a car?</li>
-        <li>How to rent a car?</li>
+      <ul className="list-disc pl-8">
+        <li>What is a Radar?</li>
+        <li>How to expensive is a Radar?</li>
+        <li>What is Radar signal processing?</li>
         <li>How to rent a car?</li>
       </ul>
     </div>
