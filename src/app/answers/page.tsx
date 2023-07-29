@@ -1,11 +1,15 @@
+"use client";
 import React from "react";
 import BotOutput from "../../components/BotOutput";
+import { useSearchParams } from "next/navigation";
+import BotAnswer from "@/components/BotAnswer";
 
 const AnswerPage = () => {
+  const searchParams = useSearchParams();
+  const question = searchParams.get("question");
   return (
     <div className="page-container">
-      <p>answer page</p>
-      <BotOutput />
+      <BotAnswer question={question} />
     </div>
   );
 };

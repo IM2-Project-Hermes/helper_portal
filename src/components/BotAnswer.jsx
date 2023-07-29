@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { useState, useEffect } from "react";
 
@@ -10,8 +9,7 @@ const BotAnswer = ({ question }) => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response =
-          await fetch(/* `https://europe-west3-project-hermes-390519.cloudfunctions.net/api?question=[${question}]` */);
+        const response = await fetch();
         const jsonData = await response.json();
         setData(jsonData);
         setLoading(false);
