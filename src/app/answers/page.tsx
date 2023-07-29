@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
-import BotOutput from "../../components/BotOutput";
 import { useSearchParams } from "next/navigation";
 import BotAnswer from "@/components/BotAnswer";
-import BotSources from "@/components/BotSources";
+import UserFeedback from "@/components/UserFeedback";
 
 const AnswerPage = () => {
   const searchParams = useSearchParams();
@@ -11,6 +10,7 @@ const AnswerPage = () => {
   return (
     <div className="page-container">
       <BotAnswer question={question} />
+      <UserFeedback />
     </div>
   );
 };

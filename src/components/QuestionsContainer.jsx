@@ -5,7 +5,7 @@ import "@styles/question-container.css";
 
 const QuestionsContainer = () => {
   return (
-    <div className="questions-container border-black border-2 mx-5">
+    <div className="questions-container border-black border-2 mt-10">
       <QuestionsTitle />
       <Faq />
     </div>

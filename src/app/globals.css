@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 .page-container {
-  @apply pt-3;
+  @apply pt-3 px-10;
   background-image: linear-gradient(#3c3e4b, #ffffff);
 }
 
 .box-container {
-  @apply flex m-auto w-4/5 bg-white rounded-md;
+  @apply flex m-auto bg-white rounded-md;
   border: 2px black solid;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 }

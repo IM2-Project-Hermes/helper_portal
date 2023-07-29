@@ -10,6 +10,7 @@ const Navbar = () => {
     <div className="navbar-container">
       <Dropdownbutton />
       <h1>Hermes</h1>
+      <div className="w-12"></div>
     </div>
   );
 };
