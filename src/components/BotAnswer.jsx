@@ -1,5 +1,5 @@
 "use client";
-import React from 'react'
+import React from "react";
 import { useState, useEffect } from "react";
 import "@styles/chat-bot.css";
 
@@ -12,7 +12,7 @@ const BotAnswer = ({ question }) => {
       try {
         setLoading(true);
         const response =
-          await fetch(`https://europe-west3-project-hermes-390519.cloudfunctions.net/api?question=[${question}]`);
+          await fetch(/* `https://europe-west3-project-hermes-390519.cloudfunctions.net/api?question=[${question}]` */);
         const jsonData = await response.json();
         setData(jsonData);
         setLoading(false);
@@ -45,7 +45,7 @@ const BotAnswer = ({ question }) => {
       </div>
       <p>Question sent to ChatBot: {question}</p>
     </div>
-  )
-}
+  );
+};
 
-export default BotAnswer
+export default BotAnswer;
