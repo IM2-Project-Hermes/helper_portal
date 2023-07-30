@@ -5,6 +5,7 @@
 .page-container {
   @apply pt-3 px-10;
   background-image: linear-gradient(#3c3e4b, #ffffff);
+  height: 90vh;
 }
 
 .box-container {
