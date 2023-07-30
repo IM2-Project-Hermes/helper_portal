@@ -47,7 +47,7 @@ const BotAnswer = ({ question }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  1. {data.result.sources.match(sourcesRegex)[1]}
+                  {data.result.sources.match(sourcesRegex)[1]}
                 </a>
               </div>
             ) : (
