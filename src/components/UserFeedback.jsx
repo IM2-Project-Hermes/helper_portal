@@ -7,12 +7,11 @@ import "@styles/user-feedback.css";
 
 const UserFeedback = () => {
   return (
-    <div className="feedback-container flex justify-evenly items-center h-12 mt-5 gap-4">
+    <div className="feedback-container flex h-12 mt-5 gap-4">
       <div className="item like">
         <div>
           <Image src={thumbsUp} alt="thumbs up" />
         </div>
-        <p>Good</p>
       </div>
       <div className="item add">
         <div>
@@ -23,7 +22,6 @@ const UserFeedback = () => {
         <div>
           <Image src={thumbsDown} alt="thumbs down" />
         </div>
-        <p>Bad</p>
       </div>
     </div>
   );

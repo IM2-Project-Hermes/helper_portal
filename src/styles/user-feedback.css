@@ -6,7 +6,6 @@
 .item {
   display: flex;
   height: 100%;
-  width: 100%;
   gap: 10px;
   align-items: center;
   border: 2px black solid;
@@ -14,11 +13,6 @@
   padding: 3px;
   flex: 1;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
-}
-
-.item p {
-  margin: auto;
-  padding-right: 50px;
 }
 
 .item:nth-child(1) {
@@ -31,7 +25,6 @@
 
 .item div {
   height: inherit;
-  width: 50px;
 }
 
 .like {

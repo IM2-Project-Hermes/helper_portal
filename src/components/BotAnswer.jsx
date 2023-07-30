@@ -8,9 +8,8 @@ const BotAnswer = ({ question }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          `https://europe-west3-project-hermes-390519.cloudfunctions.net/api?question=[${question}]`
-        );
+        const response = await fetch();
+        /* `https://europe-west3-project-hermes-390519.cloudfunctions.net/api?question=[${question}]` */
 
         const jsonData = await response.json();
         setData(jsonData);
@@ -28,7 +27,7 @@ const BotAnswer = ({ question }) => {
 
   const sourcesRegex = /\/(.*)/;
   return (
-    <div className="box-container flex-col justify-between gap-4 p-3 h-2/3">
+    <div className="box-container flex-col justify-between gap-4 p-3 min-h-min">
       {question && <h2 className="font-bold">{question}?</h2>}
       {loading ? (
         <p>Loading...</p>
