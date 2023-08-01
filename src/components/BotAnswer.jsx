@@ -29,7 +29,7 @@ const BotAnswer = ({ question }) => {
   const sourcesRegex = /\/(.*)/;
   return (
     <div className="box-container flex-col justify-between gap-4 p-3 min-h-min">
-      {question && <h2 className="font-bold">{question}?</h2>}
+      {question && <h2 className="font-bold">{question}</h2>}
       {loading ? (
         <p>Loading...</p>
       ) : (
