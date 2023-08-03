@@ -9,8 +9,10 @@ const AnswerPage = () => {
   const question = searchParams.get("question");
   return (
     <div className="page-container">
-      <BotAnswer question={question} />
-      <UserFeedback />
+      <div className="flex flex-col justify-between h-full">
+        <BotAnswer question={question} />
+        <UserFeedback />
+      </div>
     </div>
   );
 };

@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 .page-container {
-  @apply pt-3 px-10;
+  @apply py-3 px-10;
   background-image: linear-gradient(#3c3e4b, #ffffff);
-  height: 90vh;
+  height: 92vh;
   max-width: 100vw;
 }
 
 .box-container {
-  @apply flex m-auto bg-white rounded-md;
+  @apply flex bg-white rounded-md;
   border: 2px black solid;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 }
