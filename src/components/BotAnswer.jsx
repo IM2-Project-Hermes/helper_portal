@@ -42,14 +42,19 @@ const BotAnswer = ({ question }) => {
           <>
             {data ? (
               <div className="mt-2">
-                <a
-                  className="underline"
-                  href={`https://www.schelix.de/${data.result.sources}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {data.result.sources?.match(/\/(.*)/)[1]}
-                </a>
+                {data.result.sources === null ||
+                data.result.sources === "N/A" ? (
+                  <p>No Source found</p>
+                ) : (
+                  <a
+                    className="underline"
+                    href={`https://www.schelix.de/${data.result.sources}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {data.result.sources?.match(/\/(.*)/)[1]}
+                  </a>
+                )}
               </div>
             ) : (
               <p>No data available.</p>
