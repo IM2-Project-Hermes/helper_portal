@@ -1,0 +1,42 @@
+
+.feedback-container div {
+  display: flex;
+  color: white;
+}
+
+.item {
+  display: flex;
+  height: 100%;
+  gap: 10px;
+  align-items: center;
+  border: 2px black solid;
+  border-radius: 5px;
+  padding: 3px;
+  flex: 1;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.item:nth-child(1) {
+  flex: 2; /* This item will take double the space of other items */
+}
+
+.item:nth-child(3) {
+  flex: 2; /* This item will take double the space of other items */
+}
+
+.item div {
+  height: inherit;
+}
+
+.like {
+  background-color: #26de81;
+}
+
+.dislike {
+  background-color: #fc5c65;
+}
+
+.add {
+  background-color: #ffffff;
+  justify-content: center;
+}

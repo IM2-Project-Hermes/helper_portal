@@ -1,9 +1,18 @@
+"use client";
 import Image from "next/image";
+import QuestionsContainer from "@/components/QuestionsContainer";
+import UserQuestion from "@/components/UserQuestion";
 
-export default function Home() {
+const HomePage = () => {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <h1 className="">This Prototype will soon be available.</h1>
-    </main>
+    <div className="page-container">
+      <div className="flex justify-center items-center">
+        <Image src="/hella-logo.svg" alt="logo" width={425} height={283}/>
+      </div>
+      <UserQuestion />
+      <QuestionsContainer />
+    </div>
   );
-}
+};
+
+export default HomePage;
